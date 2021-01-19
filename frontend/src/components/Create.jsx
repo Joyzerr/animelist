@@ -26,7 +26,6 @@ const Criar=()=>{
         <input onChange={(event)=>{
             setEpisodes(event.target.value);
         }} type="number"/>
-        <br/>
         <button onClick={enviar} type="submit">adicionar</button>
 
     </div>

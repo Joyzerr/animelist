@@ -18,9 +18,5 @@ class App {
         this.server.use(cors());
         this.server.use(express.json());
     }
-
-
-
-
 }
 module.exports = new App().server;

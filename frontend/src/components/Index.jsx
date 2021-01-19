@@ -3,6 +3,7 @@ import axios from 'axios';
 
 const Animes=()=>{
     const [animes,setAnimes]= useState([]);
+    const [status,setStatus]= useState(false);
 
     useEffect(()=>{
         axios.get('http://localhost:4000/animes').then((response)=>{
@@ -11,6 +12,11 @@ const Animes=()=>{
             console.log(error);
         })
     })
+    const onOrOff=(id,stts)=>{
+        axios.put('http://localhost:4000/animes/'+id,{
+            status: !stts
+        });
+    }
 
     return (
         <>
@@ -25,7 +31,13 @@ const Animes=()=>{
             {animes.map(anime => {
                 return <tr key={anime._id}>
                     <td>{anime.name}</td>
-                    <td>{anime.numberEpisodes}</td></tr> 
+                    <td>{anime.numberEpisodes}</td>
+                    <td><button onClick={()=>{
+                        onOrOff(anime._id,anime.status)
+                    }}>
+                    {anime.status ? "assistido" : "nao assistido"} </button></td>
+                    {/* <td>{anime.status ? "assistido": "não assistido"}</td> */}
+                    </tr> 
             })}
             </table>
         </>
