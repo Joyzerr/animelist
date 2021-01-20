@@ -1,6 +1,6 @@
 import React, { useState , useEffect} from 'react';
 import axios from 'axios';
-
+import './Index.css'
 const Animes=()=>{
     const [animes,setAnimes]= useState([]);
     const [status,setStatus]= useState(false);
@@ -20,8 +20,9 @@ const Animes=()=>{
 
     return (
         <>
-        <h1>lista de animes</h1>
-            <table border="1">
+        <h1 id="title">lista de animes</h1>
+        <div id="tabella">
+            <table id="tabela">
                 <tr>
                     <td>Animes:</td>
                     <td>Episodios:</td>
@@ -40,6 +41,7 @@ const Animes=()=>{
                     </tr> 
             })}
             </table>
+            </div>
         </>
     )
 }

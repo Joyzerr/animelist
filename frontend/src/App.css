@@ -1,0 +1,26 @@
+#criar ul {
+  padding: 0px;
+  margin: 0px;
+  background-color: #ededed00;
+  list-style: none;
+  text-align: center;
+}
+#criar ul li {
+  display: inline;
+}
+#criar ul li a {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 20px 40px;
+  display: inline-block;
+  background-color: #3ca4e028;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(3, 0, 0, 0.623);
+  text-decoration: none;
+  border-bottom: 3px solid #2454c5;
+}
+#criar ul li a:hover {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #d6d6d6;
+  color: #121213;
+  border-bottom: 3px solid #008cea;
+}
