@@ -30,32 +30,34 @@ const Animes=()=>{
         
     }
     return (
-        <>
+        <div>
         <h1 id="title">lista de animes</h1>
+        <div id="geral">
         <div id="tabella">
             <table id="tabela">
                 <tr id="tr-titulo">
                     <td>Animes:</td>
                     <td>Episodios:</td>
                     <td>Status:</td>
-                    <td>Ações:</td>
+                    <td >Ações:</td>
                 </tr>
             
             {animes.map(anime => {
                 return <tr key={anime._id}>
                     <td>{anime.name}</td>
                     <td>{anime.numberEpisodes}</td>
-                    <td><button onClick={()=>{
+                    <td><button className="bottom" onClick={()=>{
                         onOrOff(anime._id,anime.status)
                     }}>
                     {anime.status ? "assistido" : "nao assistido"} </button>
                     </td>
-                    <td>
-                        <button>
-                            <Link to={{pathname:"/criar",
-                        anime}}>Editar</Link>
+                    <td className="action"> <Link to={{pathname:"/criar",
+                        anime}}>
+                        <button className="bottom">
+                           Editar
                         </button> 
-                        <button onClick={()=>{
+                        </Link>
+                        <button className="bottom" onClick={()=>{
                             apagar(anime._id);
                         }}>apagar</button>
                     </td>
@@ -63,7 +65,8 @@ const Animes=()=>{
             })}
             </table>
             </div>
-        </>
+            </div>
+        </div>
     )
 }
 

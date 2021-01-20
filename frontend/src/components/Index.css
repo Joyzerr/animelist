@@ -42,8 +42,8 @@ body {
 /* basic shared rules */
 #tabela th,
 #tabela td {
-  text-align: right;
-  padding-right: 0.5em;
+  text-align: center;
+  display: flexbox;
 }
 
 #tabela th {
@@ -62,38 +62,36 @@ body {
   color: rgba(128, 128, 128, 0);
 }
 
-/* fix size of superscript */
-#tabela sup {
-  font-size: 75%;
-}
-
-/* body */
 #tabela td {
   background-color: rgba(204, 238, 255, 0.02);
   padding: 0.5em 0.5em 0.5em 3em;
 }
 
-#tabela tbody th:after {
-  content: ':';
+.bottom {
+  background: #3d94f6;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+  color: #060000 !;
+  font-family: Brush Script MT;
+  font-size: 17px;
+  font-weight: 400;
+  padding: 20px;
+  border: 0;
+  cursor: pointer;
+  text-align: center;
+  align-items: center;
+  display: flex;
 }
 
-/* footer */
-#tabela tfoot {
-  font-weight: bold;
+.bottom:hover {
+  border: 0;
 }
-
-#tabela tfoot th {
-  color: rgba(0, 0, 255, 0);
+#geral {
+  margin-right: 270px;
+  display: flexbox;
 }
-
-#tabela tfoot th:after {
-  content: ':';
-}
-
-#tabela > tfoot td {
-  background-color: rgba(204, 238, 238, 0.014);
-}
-
-#tabela > tfoot > tr:first-child td {
-  border-top: 0.2em solid rgb(119, 170, 119);
+.action {
+  display: flex;
+  flex-direction: row;
 }
