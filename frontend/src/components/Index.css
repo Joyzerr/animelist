@@ -4,18 +4,24 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+#tr-titulo {
+  font-size: large;
+}
 #tabela {
   font: 100% sans-serif;
   background-color: rgba(171, 169, 189, 0.719);
   border-collapse: collapse;
   empty-cells: show;
+  border: 0;
+  border-radius: 15px;
+  width: 100%;
 }
 #title {
   font-size: 60px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
   text-align: center;
+
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: rgb(83, 42, 42);
   font-size: 4em;
